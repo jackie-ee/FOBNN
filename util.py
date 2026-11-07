@@ -53,14 +53,6 @@ def binary_tanh(x):
     return 2 * binary_sigmoid(x) - 1
     # return binary_sigmoid(x)
 
-# <=0 变为 -1
-def binary_soteria(x):
-    return ((((x.sign() + 1.0)/3.0).round())*2.0 - 1.0).type(torch.FloatTensor).cuda()
-
-# <0 变为 -1
-def binary_soteria_2(x):
-    return ((((x.sign() + 2.0)/3.0).round())*2.0 - 1.0).type(torch.FloatTensor).cuda()
-
 def Alpha(tensor, delta):
     Alpha = []
     for i in range(tensor.size()[0]):
