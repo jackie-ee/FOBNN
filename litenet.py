@@ -422,7 +422,7 @@ class BWN_BM2_3_scale4_test_3(nn.Module):
         super(BWN_BM2_3_scale4_test_3, self).__init__()
         print("BINARY BM2 VERSION...")
         self.conv1 = BinaryConv2d_FOBNN(1, 20, kernel_size=5, stride=2)
-        self.bn_conv1 = nn.BatchNorm2d(20)  # 通道数
+        self.bn_conv1 = nn.BatchNorm2d(20)
         self.activation1 = BNNActivationLayer()
 
         self.fc1 = BinaryConv2d_FOBNN(2880, 400, kernel_size=1)
@@ -455,7 +455,7 @@ class TWN_BM2_3_scale4_test_3(nn.Module):
         super(TWN_BM2_3_scale4_test_3, self).__init__()
         print("TERNARY BM2 VERSION...")
         self.conv1 = TernaryConv2d_FOBNN(1, 20, kernel_size=5, stride=2)
-        self.bn_conv1 = nn.BatchNorm2d(20)  # 通道数
+        self.bn_conv1 = nn.BatchNorm2d(20)
         self.activation1 = BNNActivationLayer()
 
         self.fc1 = TernaryConv2d_FOBNN(2880, 400, kernel_size=1)
