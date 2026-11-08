@@ -48,7 +48,7 @@ def main():
     if args.cuda:
         torch.cuda.manual_seed(args.seed)
     else:
-        torch.manual_seed(args.seed)  # CPU 固定种子
+        torch.manual_seed(args.seed)
     kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
 
     logf = open('./MnistNet2.log', 'w')
